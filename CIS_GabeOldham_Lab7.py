@@ -1,7 +1,8 @@
 # Module 7 Lab-7
 # Gabe Oldham
 # 10/29/2024
-# This code 
+# This code is asks the user for the number of tickets sold in sections a, b, and c. 
+# then calculates the number of income from each section as well as a total income.
 
 
 # Define position in section arrays
