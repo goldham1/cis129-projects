@@ -1,0 +1,65 @@
+# Module 12 Lab-12
+# Gabe Oldham
+# 12/03/2024
+# This code asks for your pets name, type and age then prints
+# the information provided.
+
+
+# Pet Class
+class Pet:
+    # Constructor to initialize the pet's name, type, and age
+    def __init__(self, name="", type="", age=0):
+        self.name = name
+        self.type = type
+        self.age = age
+
+    # Mutators (Setters)
+    def setName(self, name):
+        self.name = name
+
+    def setType(self, type):
+        self.type = type
+
+    def setAge(self, age):
+        self.age = age
+
+    # Accessors (Getters)
+    def getName(self):
+        return self.name
+
+    def getType(self):
+        return self.type
+
+    def getAge(self):
+        return self.age
+
+# Main program
+def main():
+    # Declare variables for input
+    inputName = input("Enter your pet's name : ")
+    # Loop to ensure valid pet type input
+    while True:
+        inputType = input("Enter your pet's type: ")
+        # Check if the input is a number
+        if inputType.isdigit():
+            print("Please input a valid pet type.")
+        else:
+            break  # Valid input, exit loop
+    inputAge = int(input("Enter your pet's age : "))
+
+    # Create a Pet object
+    animal = Pet()
+
+    # Set the pet's name, type, and age
+    animal.setName(inputName)
+    animal.setType(inputType)
+    animal.setAge(inputAge)
+
+    # Display the pet's information
+    print(f"Your pet name : {animal.getName()}")
+    print(f"Your pet type : {animal.getType()}")
+    print(f"Your pet age : {animal.getAge()}")
+
+# Execute the main program
+if __name__ == "__main__":
+    main()
